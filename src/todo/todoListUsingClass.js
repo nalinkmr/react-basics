@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class todoListUsingClass extends Component {
+export default class TodoListUsingClass extends Component {
     constructor() {
         super();
         this.state = {

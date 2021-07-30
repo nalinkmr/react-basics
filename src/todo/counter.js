@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import App from '../App.js';
+import TodoListUsingClass from './todoListUsingClass'
 
 export default class counter extends Component {
     constructor(props) {
@@ -10,7 +11,6 @@ export default class counter extends Component {
     }
 
     render() {
-        // const array = this.props.array;
         const mystyle = {
             color: "white",
             backgroundColor: "DodgerBlue",
@@ -22,12 +22,13 @@ export default class counter extends Component {
             <>
                 <div style={mystyle}>{this.props.display}</div>
                 <br></br>
-                <button onClick={() => this.setState({ ticktick: this.state.ticktick + 1 })}>+</button>
+                <button style={mystyle} onClick={() => this.setState({ ticktick: this.state.ticktick + 1 })}>+</button>
+
                 {this.state.ticktick}
 
-                <button onClick={() => this.setState({ ticktick: this.state.ticktick - 1 })}>-</button>
-                {/* <button onClick={() => this.setState({ticktick : this.state.ticktick + 1})}>start tick tick</button> */}
+                <button style={mystyle} onClick={() => this.setState({ ticktick: this.state.ticktick - 1 })}>-</button>
                 <hr></hr>
+                <TodoListUsingClass />
             </>
         )
     }
