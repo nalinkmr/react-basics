@@ -1,17 +1,18 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
 
-export default class Home extends React.Component {
 
-    componentDidMount() {
-        const code = document.createElement("code");
-        const node = document.createTextNode(this.props.data);
-        code.appendChild(node);
-        document.getElementById("dom").appendChild(code);
-    }
+export default class home extends React.Component {
+
+
 
     render() {
         return (
+            <>
             <p>this is my home</p>
+            <Button color="primary">Button</Button>
+
+            </>
         )
 
     }

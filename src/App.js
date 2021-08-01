@@ -1,17 +1,21 @@
-import React, { Component } from 'react'
-import TodoListUsingClass from './todo/todoListUsingClass'
-import Counter from './todo/counter'
-import router from './router'
+import React , {useEffect} from 'react';
+import { createBrowserHistory } from 'history';
+import { Router } from 'react-router-dom';
+import Routes from './router';
+import Home from './home/home';
 
-export default class App extends Component {
+export default function App (props) {
+  const history = createBrowserHistory();
 
-
-  render() {
+    useEffect(() => {
+      return props.location.pathname === '/' ? (<Home />) : (props.location.pathname === '/home' ? <Home /> : null)
+    },[props.location.pathname]);
+    
     return (
       <>
-        <Counter display="this is my counter" />
-        {/* <TodoListUsingClass /> */}
+        <Router history={history}>
+          <Routes {...props} />
+        </Router>
       </>
     )
-  }
 }

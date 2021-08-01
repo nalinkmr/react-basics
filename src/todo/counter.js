@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import App from '../App.js';
 import TodoListUsingClass from './todoListUsingClass'
 
 export default class counter extends Component {
