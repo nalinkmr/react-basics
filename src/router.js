@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './home/home';
+import List from './home/list';
 import Counter from './todo/counter'
-import Header from './header/header'
 
 export default class router extends Component {
     render() {
@@ -10,9 +10,9 @@ export default class router extends Component {
             <>
                 <Router>
                     <Switch>
-                        <Route path="/" component={Home} />
+                        <Route path="/" component={List} />
                         <Route path="/home" component={Home} />
-                        <Route path="/header" component={Header} />
+                        <Route path="/list" component={List} />
                         <Route path="/todo/counter" component={Counter} />
                     </Switch>
                 </Router>
